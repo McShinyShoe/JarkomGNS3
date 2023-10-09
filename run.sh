@@ -17,8 +17,4 @@ esac
 
 print "Configuring" $MODUL "for node" $HOSTNAME
 
-curl -o configure.sh https://raw.githubusercontent.com/McShinyShoe/JarkomGNS3/master/$MODUL/$HOSTNAME.sh
-
-chmod +x ./configure.sh
-
-bash ./configure.sh
+bash -c "$(curl -fs https://raw.githubusercontent.com/McShinyShoe/JarkomGNS3/master/$MODUL/$HOSTNAME.sh)"
